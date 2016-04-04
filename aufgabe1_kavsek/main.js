@@ -1,13 +1,10 @@
 console.log("Aufgabe 1 & 2 - Lilly Kavsek\n");
-
 var line = "-------------------";
-var counter = 0;
 
-// activate fs
+// activate fs & calc & lodash
 var fs = require('fs');
-
-// activate chalk
 var chalk = require('chalk');
+var lodash = require('lodash');
 
 // read
 fs.readFile(__dirname + "/wolkenkratzer.json", function (err, data) {
