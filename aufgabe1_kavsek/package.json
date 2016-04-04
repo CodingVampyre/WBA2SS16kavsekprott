@@ -1,0 +1,16 @@
+{
+  "name": "aufgabe1_kavsek",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "chalk": "latest",
+    "lodash": "^4.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node main.js"
+  },
+  "author": "lillykavsek",
+  "license": "UNLICENSED"
+}
