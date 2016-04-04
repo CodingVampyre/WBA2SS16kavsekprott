@@ -24,7 +24,7 @@ fs.readFile(__dirname + "/wolkenkratzer.json", function (err, data) {
     // write to file
     var jsondataJ = JSON.stringify(jsondata);
     console.log(jsondataJ);
-    fs.writeFile(__dirname + "/finished.json", jsondataJ, function (err) {
+    fs.writeFile(__dirname + "/wolkenkratzer_sortiert.json", jsondataJ, function (err) {
         console.log("Ups! Das JSON konnte nicht geschrieben werden.");
     });
 
