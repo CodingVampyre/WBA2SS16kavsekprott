@@ -1,8 +1,7 @@
-
 CREATE TABLE card_subcatergory (
                 subc_id INT AUTO_INCREMENT NOT NULL,
                 subc_name VARCHAR NOT NULL,
-                description VARCHAR NOT NULL,
+                cat_description VARCHAR NOT NULL,
                 PRIMARY KEY (subc_id)
 );
 
