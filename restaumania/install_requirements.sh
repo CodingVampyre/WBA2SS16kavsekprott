@@ -7,3 +7,5 @@ sudo apt-get install libmysqlclient-dev
 sudo apt-get install python-dev
 
 sudo pip install MySql-python
+
+mysql -u root -p restaumania < creation.sql
