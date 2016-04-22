@@ -26,7 +26,7 @@ for single in data:
 	object_list.append(d)
 
 j = json.dumps(object_list)
-objects_file = 'restList.js'
+objects_file = 'restList.json'
 f = open(objects_file, 'w')
 print >> f, j
 
