@@ -4,6 +4,7 @@ fs.readFile(__dirname + "/restList.json", function (err, data){
 	data = data.toString();
 	data = JSON.parse(data);
 
-	console.log(data[1].rname);
-	console.log(data[1].rdesc);
+	for(var i=0; i<data.length; i++){
+		console.log(data[i].rname + ": " + data[i].rdesc);
+	}
 });
