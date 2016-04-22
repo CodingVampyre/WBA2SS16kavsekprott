@@ -1,11 +1,6 @@
-# -*- coding: utf-8 -*-
-
 import MySQLdb
 import sys
 import json
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 try:
 	db = MySQLdb.connect(host="127.0.0.1", 
@@ -20,9 +15,15 @@ cursor = db.cursor()
 cursor.execute("SELECT restaurant_name, restaurant_description FROM restaurant")
 data = cursor.fetchall()
 
+rowarray_list = []
+
 for single in data:
-	with open("target.json", "w") as myfile:
-		json.dump(single[0], myfile)
-		json.dump(single[1], myfile)
+	t = (single[0], single[1])
+	rowarray_list.append(t)
+
+j = json.dumps(rowarray_list)
+rowarrays_file = 'r_list.js'
+f = open(rowarrays_file, 'w')
+print >> f, j
 
 db.close
