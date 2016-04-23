@@ -8,8 +8,10 @@ user = "root"
 passwd = "root"
 db = "restaumania"
 
-rname = "Klotz"
-rdesc = "Eine kleine Bude in Niedersessmar."
+print "Name"
+rname = raw_input()	
+print "Beschreibung"
+rdesc = raw_input()
 userid = 1
 
 try:
