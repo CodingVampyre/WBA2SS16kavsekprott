@@ -65,4 +65,10 @@ def getFromDatabase ( getType, selectedID ):
 
 	db.close
 
-getFromDatabase('singleCard', 1)
+command = sys.argv[1]
+number = sys.argv[2]
+
+if command in ['restList', 'singleCard']:
+	getFromDatabase(command, number)
+else:
+	print "Error: Command not found!"
