@@ -71,4 +71,4 @@ number = sys.argv[2]
 if command in ['restList', 'singleCard']:
 	getFromDatabase(command, number)
 else:
-	print "Error: Command not found!"
+	print "Available commands: restList, singleCard"
