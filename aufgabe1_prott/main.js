@@ -5,6 +5,7 @@ var fs = require('fs');
 var utf8 = require('utf8');
 var chalk = require('chalk');
 
+
 function sortHeight(a, b) {
     if (a.hoehe < b.hoehe) {
         return -1;
@@ -16,8 +17,8 @@ function sortHeight(a, b) {
 
 fs.readFile(__dirname + "/wolkenkratzer.json", function (err, data) {
     data = data.toString();
-    data = JSON.parse(data);
-    data = data.wolkenkratzer.sort(sortHeight);
+    jsondata = JSON.parse(data);
+    jsondata.wolkenkratzer.sort(sortHeight);
 
     // write to file
     var jsondataJ = JSON.stringify(data);
@@ -25,12 +26,14 @@ fs.readFile(__dirname + "/wolkenkratzer.json", function (err, data) {
         console.log("wrote successfully");
     });
 
-    for (var i = 0; i < data.wolkenkratzer.length; i++) {
+
+
+    for (var i = 0; i < data.wolkenkratzer.Length; i++) {
 
         console.log(chalk.green("Name: " + data.wolkenkratzer[i].name) + chalk.red("\nStadt: " + data.wolkenkratzer[i].stadt) + chalk.blue("\nHoehe: " + data.wolkenkratzer[i].hoehe) + "\n--------------------------");
 
     }
 
-    //console.log(data.wolkenkratzer[1]);
+    // console.log(data.wolkenkratzer[1]);
     // console.log(data);
 });
