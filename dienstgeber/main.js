@@ -3,6 +3,8 @@ var fs = require('fs');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
 
+var app = express();
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -18,8 +20,6 @@ var connection = mysql.createConnection({
 	password	: 'root',
 	database	: 'restaumania'
 });
-
-var app = express();
 
 app.get('/bloodymarry', function (req, res){
 	res.send('BUUUH!\n');
