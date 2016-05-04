@@ -50,6 +50,20 @@ app.get('/users/:nickname', function (req, res){
 	connection.end();
 });
 
+// made by Tim
+app.get('/restaurant/:name', function (req, res){
+	connection.connect();
+	//mit query Zugriff auf Datenbank
+	connection.query('platzhalter für dunkle SQL Magie' + req.params.name + '";', function (err, row, fields){
+		var restaurantData = JSON.stringify({
+			""
+		});
+		res.json(restaurantData);
+	});
+	connection.end();
+});
+
+
 app.post('/users/:nickname', function (req, res) {
 	connection.connect();
 	var username = req.body.name;
