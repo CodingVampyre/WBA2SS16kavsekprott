@@ -50,7 +50,7 @@ app.get('/users/:nickname', function (req, res){
 });
 
 app.post('/users/:nickname', function (req, res) {
-	conenction.connect();
+	connection.connect();
 	var username = req.body.name;
 	var pw = req.body.pw;
 	var pwhash = sha1(pw);
