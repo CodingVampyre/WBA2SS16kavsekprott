@@ -12,7 +12,8 @@
 \renewcommand{\familydefault}{\sfdefault}
 {\renewcommand{\arraystretch}{2}
 
-\title{MCI - Skript}
+\title{REST-Spezifikationen}
+\author{Kavsek and Prott}
 
 \begin{document}
 
@@ -24,6 +25,7 @@
 		Ressource & Methodik & Semantik & content-type (req) & content-type (res) \\
 		\hline
 		\hline
+		/about & GET & Liefern einer Information & text/plain & text/plain \\
 		/users/:name & GET & Liefern eines Users & text/plain & application/json \\
 		/users/:name & POST & Einfügen eines neuen Users & application/json & text/plain \\
 		\hline
