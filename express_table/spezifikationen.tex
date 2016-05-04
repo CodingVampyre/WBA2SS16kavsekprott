@@ -1,14 +1,11 @@
 \documentclass[10pt]{article}
 \usepackage{ngerman}
-\usepackage{graphicx}
 \usepackage{a4wide}
 \usepackage{ucs}
-\usepackage[ansinew]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{helvet}
 \usepackage{float}
 \usepackage[T1]{fontenc}
-\usepackage{color}
-\usepackage{pgfplots}
 \usepackage[top=1cm, left=2cm, right=2cm, bottom=2cm]{geometry}
 \renewcommand{\familydefault}{\sfdefault}
 {\renewcommand{\arraystretch}{2}
@@ -28,7 +25,14 @@
 		\hline
 		/about & GET & Liefern einer Information & text/plain & text/plain \\
 		/users/:name & GET & Liefern eines Users & text/plain & application/json \\
-		/users/:name & POST & Einf�gen eines neuen Users & application/json & text/plain \\
+		/users/:name & POST & Einfügen eines neuen Users & application/json & application/json \\
+		/users/:name & PUT & Kundenprofil updaten & application/json & text/json \\
+		/restaurant/:name & POST & Restaurantprofil erstellen & application/json & application/json \\
+		/restaurant/:name & PUT & Restaurantprofil updaten & application/json & application/json \\
+		/restaurant/:name & GET & Restaurantprofil/Speisekarte abrufen & text/plain & text/json \\
+		/restaurant/:name/card/:entry & POST & Karteneintrag hinzufügen & application/json & application/json \\
+		/restaurant/category/:cname & GET & Kategorie suchen & text/plain & text/json \\
+		
 		\hline
 	\end{tabular}
 \end{center}
