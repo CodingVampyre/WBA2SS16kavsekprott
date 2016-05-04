@@ -1,6 +1,16 @@
 var express = require('express');
 var fs = require('fs');
 var mysql = require('mysql');
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+function sha1(data){
+	var generator = crypto.createHash('sha1');
+	generator.update(data);
+	return generator.digest('hex');
+}
 
 var connection = mysql.createConnection({
 	host		: 'localhost',
@@ -11,16 +21,12 @@ var connection = mysql.createConnection({
 
 var app = express();
 
-app.get('/', function (req, res){
-	res.send('Works!');
-});
-
 app.get('/bloodymarry', function (req, res){
-	res.send('BUUUH!');
+	res.send('BUUUH!\n');
 });
 
 app.get('/about', function (req, res){
-	res.send("This little Server was made by Lilly Kavsek in honorable mention of Tim Prott!");
+	res.send("This little Server was made by Lilly Kavsek in honorable mention of Prof. Dr. Ph.D. Sir. Tim Prott!");
 });
 
 app.get('/restaurant/:name', function (req, res){
@@ -29,12 +35,12 @@ app.get('/restaurant/:name', function (req, res){
 	connection.end();
 });
 
-app.get('/user/:nickname', function (req, res){
+app.get('/users/:nickname', function (req, res){
 	connection.connect();
 	connection.query('SELECT nickname, pwhash FROM restaurant_user WHERE nickname = "' + req.params.nickname + '";', function (err, row, fields){
 		if (err) throw err;
-		//res.send("Nickname: " + row[0].nickname + "/Passwort: " + row[0].pwhash);
 		var accountData = JSON.stringify({
+			"uid":row[0].id,
 			"name":row[0].nickname,
 			"pwhash":row[0].pwhash
 		});
@@ -43,25 +49,13 @@ app.get('/user/:nickname', function (req, res){
 	connection.end();
 });
 
-app.get('/RLIST/:name/:stadt?', function (req, res){
-
-	fs.readFile(__dirname + "/restaurants.json", function (err, data) {
-		data = data.toString();
-		parsedData = JSON.parse(data);
-
-		var message = "";
-
-		for(var i=0; i<parsedData.restaurants.length; i++){
-			if (parsedData.restaurants[i].name == req.params.name) {
-				if (parsedData.restaurants[i].stadt == req.params.stadt || req.params.stadt == 'undefined'){
-					message += (parsedData.restaurants[i].strasse + " ");
-				}
-			}
-		}
-
-		res.send(message+"\n");
-		console.log("Success!");
-	});
+app.post('/users/:nickname', function (req, res) {
+	conenction.connect();
+	var username = req.body.name;
+	var pw = req.body.pw;
+	var pwhash = sha1(pw);
+	console.log("Hash: " + pwhash);
+	connection.close();
 });
 
 app.listen(3000, function() {
