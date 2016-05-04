@@ -2,6 +2,7 @@ var express = require('express');
 var fs = require('fs');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
+var crypto = require('crypto');
 
 var app = express();
 
@@ -53,9 +54,9 @@ app.post('/users/:nickname', function (req, res) {
 	connection.connect();
 	var username = req.body.name;
 	var pw = req.body.pw;
-	var pwhash = sha1(pw);
+	var pwhash =  "somehash" //sha1(pw);
 	console.log("Hash: " + pwhash);
-	connection.close();
+	connection.end();
 });
 
 app.listen(3000, function() {
