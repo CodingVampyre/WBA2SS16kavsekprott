@@ -38,7 +38,7 @@ app.get('/restaurant/:name', function (req, res){
 app.get('/users/:nickname', function (req, res){
 	connection.connect();
 	connection.query('SELECT nickname, pwhash FROM restaurant_user WHERE nickname = "' + req.params.nickname + '";', function (err, row, fields){
-		if (err) throw err;
+		//if (err) throw err;
 		var accountData = JSON.stringify({
 			"uid":row[0].id,
 			"name":row[0].nickname,
