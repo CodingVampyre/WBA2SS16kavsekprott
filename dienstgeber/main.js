@@ -2,6 +2,7 @@ var express = require('express');
 var fs = require('fs');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
+var crypto = require('crypto');
 
 var app = express();
 
@@ -38,7 +39,7 @@ app.get('/restaurant/:name', function (req, res){
 app.get('/users/:nickname', function (req, res){
 	connection.connect();
 	connection.query('SELECT nickname, pwhash FROM restaurant_user WHERE nickname = "' + req.params.nickname + '";', function (err, row, fields){
-		if (err) throw err;
+		//if (err) throw err;
 		var accountData = JSON.stringify({
 			"uid":row[0].id,
 			"name":row[0].nickname,
@@ -50,12 +51,12 @@ app.get('/users/:nickname', function (req, res){
 });
 
 app.post('/users/:nickname', function (req, res) {
-	conenction.connect();
+	connection.connect();
 	var username = req.body.name;
 	var pw = req.body.pw;
-	var pwhash = sha1(pw);
+	var pwhash =  "somehash" //sha1(pw);
 	console.log("Hash: " + pwhash);
-	connection.close();
+	connection.end();
 });
 
 app.listen(3000, function() {
