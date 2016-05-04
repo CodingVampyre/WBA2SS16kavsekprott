@@ -1,0 +1,10 @@
+{
+	"restaurants":[
+		{"name":"klotz", "stadt":"niedersessmar", "strasse":"gummersbacher strasse"},
+		{"name":"pizzamama", "stadt":"gummersbach", "strasse":"gummersbacher strasse"},
+		{"name":"mensa", "stadt":"gummersbach", "stasse": "steinmueller-allee"},
+		{"name":"mensa", "stadt":"koeln-deuz", "strasse": "dogeweg"},
+		{"name":"mcdonalds", "stadt":"koeln", "strasse": "trankgasse"},
+		{"name":"mcdonalds", "stadt":"bonn", "strasse": "innenstadt-strasse"}
+	]
+}
