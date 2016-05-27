@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.4)  4 MAY 2016 13:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.4)  23 MAY 2016 10:10
 entering extended mode
-**./spezifikationen.tex
-(spezifikationen.tex
+**C:/Users/Tim/WBA2SS16kavsekprott/express_table/spezifikationen.tex
+(C:/Users/Tim/WBA2SS16kavsekprott/express_table/spezifikationen.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 ("C:\Users\Tim\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -412,17 +412,17 @@ Overfull \hbox (48.94917pt too wide) in paragraph at lines 21--38
 ### simple group (level 1) entered at line 11 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 1732 strings out of 493634
- 23541 string characters out of 3136056
+ 1733 strings out of 493634
+ 23682 string characters out of 3136056
  88182 words of memory out of 3000000
  5115 multiletter control sequences out of 15000+200000
  15809 words of font info for 30 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 23i,7n,19p,344b,386s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 23i,7n,19p,389b,386s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Tim/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
 /fontname/8r.enc}<C:/Users/Tim/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
 w/helvetic/uhvr8a.pfb>
-Output written on spezifikationen.pdf (1 page, 13535 bytes).
+Output written on spezifikationen.pdf (1 page, 13615 bytes).
 PDF statistics:
  11 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
