@@ -1,0 +1,20 @@
+{
+  "name": "db",
+  "version": "0.0.1",
+  "description": "Restaumania Alpha",
+  "main": "fetchJSON.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "WBA2SS16kavseksimonprott"
+  },
+  "author": "Lilly Kavsek",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "chalk": "~1.1.3",
+    "json2html": "0.0.8",
+    "node-json2html": "~1.0.0"
+  }
+}
